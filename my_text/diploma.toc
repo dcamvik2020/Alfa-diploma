@@ -1,0 +1,15 @@
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {1}Введение}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Актуальность исследования}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Цели и задачи работы}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Методология исследования}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Структура работы}{7}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Основы uplift-моделирования}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Склонность и чувствительность}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Математическое определение uplift}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Правильное формирование выборки}{12}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Простейшие методы uplift-моделирования}{13}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Продвинутые методы uplift-моделирования}{20}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Методы оценки качества uplift-моделей}{21}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Примеры применения uplift-моделирования}{33}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Проблемы uplift-моделирования}{34}{subsection.2.8}%

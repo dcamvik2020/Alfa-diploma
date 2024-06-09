@@ -1,0 +1,228 @@
+\documentclass[14pt]{extarticle}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage[a4paper, % Согласно требованиям к ВКР
+  lmargin=30mm, rmargin=15mm, tmargin=20mm, bmargin=20mm]{geometry}
+\usepackage{multirow}
+
+
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+
+
+
+
+
+% для bmatrix	
+\usepackage{amsmath, xparse}
+% для специальных цветов
+\usepackage[usenames,dvipsnames]{xcolor}
+
+
+
+
+
+\usepackage{titlesec}
+
+%\titleformat{\chapter}[block]
+%  {\normalfont\Huge\bfseries}
+%  {Глава \thechapter}
+%  {20pt}
+%  {\Huge}
+
+
+\usepackage{tocloft}
+
+% Настройка заголовков секций
+%\titleformat{\section}[block]
+%  {\normalfont\Large\bfseries}
+%  {Глава \thesection}
+%  {10pt}
+%  {\Large}
+
+% Настройка заголовков в оглавлении
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecaftersnum}{\hspace{0.5em}}
+\renewcommand{\cftsecnumwidth}{3em}
+\renewcommand{\cftsecafterpnum}{\vskip 0pt}
+\renewcommand{\cftsecafterpnum}{\hspace*{0em}}
+
+
+% Функция для добавления слова "Глава" в оглавление
+\makeatletter
+\renewcommand{\numberline}[1]{Глава\space #1\space}
+\makeatother
+
+
+
+% Согласно требованиям к ВКР
+\defaultfontfeatures{Ligatures=TeX}
+
+\setmainfont{Times New Roman}
+\setmonofont{Courier New}
+\setsansfont{Arial}
+
+\newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily\cyrillicfontsf{Arial}
+\newfontfamily\cyrillicfonttt{Courier New}
+
+\newfontfamily\englishfont{Times New Roman}
+\newfontfamily\englishfontsf{Arial}
+\newfontfamily\englishfonttt{Courier New}
+
+\linespread{1.5}
+
+\usepackage[backend=biber,
+  bibencoding=utf8,
+  sorting=none,
+  style=gost-numeric,
+  language=autobib,
+  autolang=other,
+  clearlang=true,
+  defernumbers=true,
+  sortcites=true,
+  doi=true,
+  isbn=true,
+  ]{biblatex}
+
+\bibliography{bibliography}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks,colorlinks=true,citecolor=BurntOrange,urlcolor=Blue]{hyperref}
+\renewcommand{\UrlFont}{\small\rmfamily\tt}
+
+
+\renewcommand\thesection{\arabic{section}}
+
+\usepackage{amsfonts}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{wrapfig}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+
+\renewcommand*{\maketitle}{
+\begin{titlepage}
+  \begin{center}
+    \linespread{1}
+    \small
+    Федеральное государственное автономное образовательное учреждение\break высшего образования\par
+    <<Московский физико-технический институт \break (национальный исследовательский университет)>>\par
+    Физтех-школа Прикладной Математики и Информатики\par
+    Кафедра алгоритмов и технологий программирования\par
+  \end{center}
+%
+  {
+    \small
+    {\bf Направление подготовки / специальность}: 09.04.01 Информатика и вычислительная техника\newline
+    {\bf Направленность (профиль) подготовки}: Анализ данных и разработка информационных систем
+  }
+%
+  {
+    \topskip0pt
+    \vspace*{\fill}
+    \begin{center}
+      {
+      	\bf\Large
+      	ОТБОР ПРИЗНАКОВ В UPLIFT-МОДЕЛИРОВАНИИ\break
+      	ДЛЯ ДАННЫХ ВЫСОКОЙ РАЗМЕРНОСТИ
+      }\par
+      (магистерская диссертация)
+    \end{center}
+    \vspace*{\fill}
+  }
+%
+  \hfill
+  \begin{minipage}[t]{8cm}
+    {\bf Студент: \newline}
+    Мельников Виктор Михайлович\newline
+    \vspace{-3mm}
+    \rule{8cm}{0.15mm}
+    \centerline{\scriptsize\it (подпись студента)}\newline
+%
+    {\bf Научный руководитель: \newline}
+    Дойников Игорь Александрович\newline
+    \vspace{-3mm}
+    \rule{8cm}{0.15mm}
+    \centerline{\scriptsize\it (подпись научного руководителя)}
+%
+%    {\bf Консультант: \newline}
+%    к.ф.-м.н. Фролов Владимир Александрович\newline
+%    \vspace{-3mm}
+%    \rule{8cm}{0.15mm}
+%    \centerline{\scriptsize\it (подпись консультанта)}
+  \end{minipage}
+
+    \vspace*{\fill}
+    \begin{center}
+      Москва 2021
+    \end{center}
+\end{titlepage}
+}
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\setcounter{page}{2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace*{\fill}
+\begin{abstract}
+%\large
+Данная работа посвящена анализу различных методов отбора признаков в задачах uplift-моделирования в случае данных больших размерностей и их влияния на финальную модель. В качестве цели работы была выбрана имплементация специализированной библиотеки, в задачи которой входят: автоматический препроцессинг данных, отбор признаков несколькими способами, построение множества uplift-моделей различных типов и их комплексная аналитика. Такая библиотека представляет большой интерес для промышленного использования, поскольку аналогичных решений в открытом доступе обнаружено не было. В ходе работы был проведен подробный анализ работы методов отбора признаков на примере банковской задачи определения чувствительности клиентов к изменению ставки при рефинансировании кредитов наличными. Также было выявлено несколько дополнительных сложностей теоретического характера, которые могут стать основой для дальнейших исследований.
+\end{abstract}
+\vspace*{\fill}
+
+
+
+
+
+
+
+
+
+%\large
+
+
+
+
+
+
+
+\newpage
+\tableofcontents
+\newpage
+
+\include{parts/1_chapter_intro}
+\include{parts/2_chapter_uplift_theory}
+\include{parts/3_chapter_feature_selection}
+\include{parts/4_chapter_feature_selection_uplift}
+\include{parts/5_chapter_experiment}
+\include{parts/6_chapter_experiment_analysis}
+\include{parts/7_chapter_conclusion_future_plans}
+\include{parts/8_literature}
+
+\newpage
+\printbibliography
+\end{document}
