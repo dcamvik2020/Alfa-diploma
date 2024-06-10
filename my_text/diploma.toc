@@ -10,6 +10,6 @@
 \contentsline {subsection}{\numberline {2.3}Правильное формирование выборки}{12}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Простейшие методы uplift-моделирования}{13}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Продвинутые методы uplift-моделирования}{20}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Методы оценки качества uplift-моделей}{21}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Примеры применения uplift-моделирования}{33}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Проблемы uplift-моделирования}{34}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.6}Методы оценки качества uplift-моделей}{27}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Примеры применения uplift-моделирования}{39}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Проблемы uplift-моделирования}{40}{subsection.2.8}%
